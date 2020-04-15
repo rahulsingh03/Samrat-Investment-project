@@ -1,0 +1,409 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:"Times New Roman", Times, serif;
+}
+
+html body{
+    font-size:14px;
+     height:100vh;
+     width:100%;
+     background-color: rgb(255, 255, 255);
+     overflow: hidden;
+}
+
+/* for navbar */
+.nav {
+    height: 100px;
+    background:rgb(255, 255, 255);
+    padding:0 20px;
+    z-index:1111;
+    top:0;
+    position:fixed;
+    width:95%;
+}
+
+.logo{
+    float:left;
+    position: absolute;
+    left:50px;
+    top:20px;
+}
+
+.menu{
+    text-transform:uppercase;
+    float:right;
+    font-weight:bold;
+}
+
+.menu a{
+    text-decoration:none;
+    color:black;
+    line-height:100px;
+    padding:0 10px;
+    transition:0.3s;
+    font-size:1.1rem;
+}
+.menu a i{
+    font-size:1.4rem;
+}
+
+.show-men-btn, .hide-men-btn{
+    transition:0.3s;
+    font-size:2rem;
+    cursor: pointer;
+    display:none;
+}
+
+.menu a:hover,
+.show-men-btn:hover,
+.hide-men-btn:hover{
+    color:#3498db;
+}
+
+.show-men-btn{
+    float:right;
+}
+
+.show-men-btn i{
+    line-height:100px;
+}
+
+#chk{
+    position:absolute;
+    visibility:hidden;
+    z-index:-1111;
+}
+
+@media screen and (max-width:1000px){
+    .show-men-btn,.hide-men-btn{
+        display:block;
+    }
+    .menu{
+        position:fixed;
+        width:100%;
+        height:100vh;
+        background: #333;
+        right:-100%;
+        line-height: normal;
+        top:0;
+        text-align:center;
+        transition:700ms;
+
+    }
+    .menu a{
+        display: block;
+    }
+    
+    .hide-men-btn{
+        position:absolute;
+        color:white;
+        top:20px;
+        right:40px;
+    }
+
+    #chk:checked ~ .menu{
+        right:0;
+    }
+}
+
+.ss{
+    width:100%;
+    height:100%;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+
+
+section#home{
+    height:100vh; 
+}
+
+.container_1{
+    width:85%;
+    height:100%;
+    margin: 0 auto;
+    display:flex;
+    justify-content: space-evenly;
+    padding-top:15em;
+
+}
+
+.container_1 .info{
+    margin-top:20px;
+    line-height:18px;
+    font-size:1.1rem;
+    font-family:Andale Mono, monospace;
+    text-align: start;
+    line-height: 1.4em;
+}
+
+.logo_1 img{
+    margin-left:10px;
+    transition: 250ms ease-in-out;
+}
+.logo_1 img:hover{
+    transform: translateY(-6%);
+}
+
+
+.sec_2{
+    height:500px;
+    background:#222220;
+    margin:50px 0px 50px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo_2{
+    margin-left:5em;
+}
+
+.sec_2_content{
+    font-size:1.5rem;
+    font-family:Andale Mono, monospace;
+    line-height: 1.5em;
+    cursor: pointer;
+    max-width:60%;
+    margin:0 auto;
+    color:#ddd;
+}
+
+/*section_3 Images flip feature */
+.container_2{
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+    height:500px;
+    border-bottom:2px solid rgb(114, 135, 228);
+}
+
+.card{
+    cursor: pointer;
+    width:311px;
+    height:293px;
+    position: relative;
+}
+
+.front,.back{
+    backface-visibility: hidden;
+    transition: transform 0.6s linear;
+    position:absolute;
+
+}
+
+.front{ 
+    transform:perspective(600px) rotateY(0deg);
+}
+
+.back{
+    background:rgb(255, 255, 255);
+    transform:perspective(600px) rotateY(180deg);
+    height:100%;
+    padding:1.5em;
+}
+.back h2{
+    left:0px;
+    text-align:left;
+    margin-bottom:0.7em;
+    color:goldenrod;
+}
+.back  p{
+    text-align: left;
+    margin-bottom:1em;
+}
+.back-content button{
+    border:none;
+    border-radius: 20%;
+    background-color:transparent;
+    color:rgb(149, 149, 255);
+}
+
+.back-content{
+    text-align:center;
+    margin-top:3em;
+}
+
+.card:hover  > .back{
+    background:rgb(255, 255, 255);
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.card:hover  > .front{
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.btn > button{
+    font-size:1.5rem;
+    border:none;
+    background-color:rgb(71, 66, 66);
+    padding:10px;
+    width:140px;
+    margin-top: 2em;
+    line-height: 1.6rem;
+    color:#ddd;
+    transition: 300ms ease-in-out;
+}
+
+.btn{
+    text-align: center;
+    height:1.6em;
+}
+.btn > button:hover{
+    background:rgb(218, 230, 57);
+    color:black;
+}
+
+.ftr{
+    height:70%;
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+}
+
+.col_1, .col_2, .col_3, .col_4{
+    width:25%;
+    height:70%;
+    padding:20px;
+}
+
+.col_1 > h1{
+    color:goldenrod;
+    margin-top:2em;
+}
+.col_1 > p{
+    margin-top:1.4em;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.col_1 > p i{
+    margin-right:2em;
+    color:goldenrod;
+    font-size: 1.2rem;
+}
+.col_1 > p i:hover{
+    transform: translateY(-10%);
+    color:rgb(130, 130, 236);
+}
+
+.col_2 > h2{
+    margin-top:6em;
+    margin-left:1.2em;
+    color:goldenrod;
+}
+.col_2 > ul{
+    list-style:none;
+    font-size:1.1rem;
+    margin-top:1.2rem;
+    margin-left:1.2em;
+}
+.col_2 > ul li{
+    padding-top:18px;
+}
+.col_2 > ul li a{
+    color:black;
+    text-decoration: none;
+    transition: 250ms ease-in-out;
+    font-family: Parkavenue, cursive;
+}
+.col_2 > ul li a:hover{
+    color:rgb(11, 226, 208);
+}
+
+
+.col_3 > h2{
+    color:goldenrod;
+    margin-top:6em;
+    margin-left:1.2em;
+}
+.col_3 > ul{
+    list-style:none;
+    font-size:1.1rem;
+    margin-top:1.2rem;
+    margin-left:1.2em;
+}
+.col_3 > ul li{
+    padding-top:18px;
+}
+.col_3 > ul li a{
+    color:black;
+    text-decoration: none;
+    transition: 250ms ease-in-out;
+    font-family: Lucidatypewriter, monospace;
+}
+.col_3 > ul li a:hover{
+    color:rgb(165, 7, 139);
+}
+
+.col_4 > h2{
+    color:rgba(230, 34, 34, 0.87);
+    margin:6em 1.2em 3em 0em;
+}
+.search_box i{
+    font-size: 1.2rem;
+    color:rgb(0, 0, 0);
+
+}
+
+.search_box{
+    width:260px;
+    border:4px black solid;
+    height:40px;
+    padding-left:10px;
+}
+
+.search-txt{
+    border:none;
+    outline: none;
+    line-height: 40px;
+    font-size: 0.9rem;
+    width:80%;
+    margin-left:10px;
+}
+
+.btn_1{
+    text-align: center;
+}
+
+.btn_1 > button{
+    margin-top:1.3em;
+    border:1px black solid;
+    font-size: 1.5rem;
+    background:goldenrod;
+    color:white;
+    padding:0.8px;
+    border-radius:5%;
+}
+.btn_1 > button:hover{
+   background:rgb(160, 160, 158);
+   color:black;
+}
+
+.end{
+    text-align: center;
+    background:gray;
+}
+
+
+.sm a{
+    display:inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-decoration: none;
+    width:60px;
+    height:60px;
+    align-items:center;
+    border-radius: 50%;
+    color:#333;
+    transition:0.4s linear;
+    margin: 0 20px;
+}
+.sm a i{
+    font-size: 1.5rem;
+}
+.sm a:hover{
+    background:#333;
+    color:#ddd;
+}
