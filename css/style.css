@@ -416,10 +416,11 @@ section#home{
 
 @media all and (max-width:900px){
     html body{
-        font-size: 12px;
+        font-size:12px;
         margin:0;
         padding:0;
-        overflow:hidden;
+        overflow-x:hidden;
+        max-width: 100%;
     }
     
     .nav{
@@ -601,6 +602,7 @@ section#home{
     height:10%;
     display:flex;
     justify-content:space-evenly;
+    margin-top:5em;
 
 }
 .col_2 h2{
