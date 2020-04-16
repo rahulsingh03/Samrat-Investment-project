@@ -483,7 +483,6 @@ section#home{
         flex-direction:column;
         justify-content:space-evenly;
         align-items:center;
-        background:teal;
     }
     .card{
     cursor: pointer;
