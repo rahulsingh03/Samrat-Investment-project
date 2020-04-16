@@ -5,9 +5,9 @@
 }
 
 html body{
-    font-size:14px;
+     font-size:14px;
      height:100vh;
-     width:100%;
+     max-width:100%;
      background-color: rgb(255, 255, 255);
      overflow: hidden;
 }
@@ -422,7 +422,9 @@ section#home{
         overflow-x:hidden;
         max-width: 100%;
     }
-    
+    .ss{
+        overflow-x:hidden;
+    }
     .nav{
         position: relative;
     }
