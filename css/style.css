@@ -579,8 +579,10 @@ section#home{
    
 }
 .col_1 > h3{
+    width:80%;
     text-align:center;
-    margin:2em 3em 3em 3em;
+    margin:0 auto;
+    margin-top:2em;
 }
 .col_1 > h1{
     font-size:1.5rem;
